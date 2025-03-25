@@ -359,7 +359,8 @@ dtb-$(CONFIG_AM43XX) += \
 	am43x-epos-evm.dtb \
 	am437x-idk-evm.dtb \
 	am4372-generic.dtb \
-	am437x-cm-t43.dtb
+	am437x-cm-t43.dtb \
+	am437x-mcb11.dtb
 dtb-$(CONFIG_TARGET_AM3517_EVM) += am3517-evm.dtb
 dtb-$(CONFIG_TI816X) += dm8168-evm.dtb
 dtb-$(CONFIG_THUNDERX) += thunderx-88xx.dtb
