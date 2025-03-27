@@ -23,10 +23,6 @@
 	u-boot,dm-spl;
 };
 
-&mmc2 {
-	u-boot,dm-spl;
-};
-
 &mac {
 	u-boot,dm-spl;
 };

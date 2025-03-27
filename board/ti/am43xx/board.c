@@ -509,11 +509,7 @@ void scale_vcores(void)
 	/* Get the frequency */
 	mpu_params = get_dpll_mpu_params();
 
-#if 0
 	if (board_is_idk())
-#else
-	if (0)
-#endif
 		scale_vcores_idk(mpu_params->m);
 	else
 		scale_vcores_generic(mpu_params->m);
@@ -638,11 +634,7 @@ int power_init_board(void)
 #ifndef CONFIG_DM_I2C
 	struct pmic *p = NULL;
 #endif
-#if 0
 	if (board_is_idk()) {
-#else
-	if (0) {
-#endif
 		rc = power_tps62362_init(0);
 		if (rc)
 			goto done;
