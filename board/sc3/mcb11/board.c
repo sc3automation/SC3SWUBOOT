@@ -581,6 +581,19 @@ int board_fit_config_name_match(const char *name)
 }
 #endif
 
+#ifdef CONFIG_SPL_BUILD
+void board_boot_order(u32 *spl_boot_list)
+{
+    /* Force SPL to try MMC1 first */
+    spl_boot_list[0] = BOOT_DEVICE_MMC1;
+
+    /* Optional fallback */
+    spl_boot_list[1] = BOOT_DEVICE_MMC2;
+
+    spl_boot_list[2] = BOOT_DEVICE_NONE;
+}
+#endif
+
 #ifdef CONFIG_DTB_RESELECT
 int embedded_dtb_select(void)
 {
