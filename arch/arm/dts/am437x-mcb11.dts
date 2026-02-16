@@ -227,7 +227,7 @@
 	};
 };
 
-&mmc2 {
+&mmc1 {
 	u-boot,dm-spl;
     status = "okay";
     bus-width = <8>;
